@@ -26,7 +26,8 @@ Movie_Analysis/
 ## System Architecture
 
 ```mermaid
-graph TB
+%%{init: {'width': '160%', 'height': '160%'}}%%
+graph LR
     subgraph "Data Sources"
         API[TMDB API]
     end
