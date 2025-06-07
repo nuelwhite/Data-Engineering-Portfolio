@@ -12,6 +12,7 @@ Movie_Analysis/
 │   ├── raw/           # Raw API data
 │   ├── processed/     # Transformed data
 │   └── kpi_analysis/  # KPI analysis results
+├── images/            # Project images and screenshots
 ├── logs/              # Log files
 ├── notebooks/         # Jupyter notebooks for development
 ├── src/              # Source code
@@ -197,4 +198,14 @@ The project uses a comprehensive logging system:
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
+## Dashboard Preview
+
+The interactive dashboard provides real-time visualization of movie data analysis. Here are some excerpts:
+
+![Dashboard Excerpt 1](images/dashboard_excerpt1.png)
+*Overview of movie statistics and trends*
+
+![Dashboard Excerpt 2](images/dashboard_excerpt2.png)
+*Detailed analysis of movie performance metrics*
 
