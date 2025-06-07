@@ -26,7 +26,7 @@ Movie_Analysis/
 ## System Architecture
 
 ```mermaid
-%%{init: {'width': '160%', 'height': '160%'}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontSize': '16px'}, 'flowchart': {'width': '160%', 'height': '500%'}}}%%
 graph LR
     subgraph "Data Sources"
         API[TMDB API]
@@ -67,12 +67,12 @@ graph LR
     K -->|Logs| L
 
     %% Styling
-    classDef source fill:#e6f3ff,stroke:#0066cc,stroke-width:2px,color:#0066cc
-    classDef process fill:#e6ffe6,stroke:#006600,stroke-width:2px,color:#006600
-    classDef storage fill:#fff2e6,stroke:#cc6600,stroke-width:2px,color:#cc6600
-    classDef viz fill:#f2e6ff,stroke:#6600cc,stroke-width:2px,color:#6600cc
-    classDef monitor fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#cc0000
-    classDef default fill:#ffffff,stroke:#333333,stroke-width:1px,color:#333333
+    classDef source fill:#e6f3ff,stroke:#0066cc,stroke-width:2px,color:#000000,font-weight:bold
+    classDef process fill:#e6ffe6,stroke:#006600,stroke-width:2px,color:#000000,font-weight:bold
+    classDef storage fill:#fff2e6,stroke:#cc6600,stroke-width:2px,color:#000000,font-weight:bold
+    classDef viz fill:#f2e6ff,stroke:#6600cc,stroke-width:2px,color:#000000,font-weight:bold
+    classDef monitor fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#000000,font-weight:bold
+    classDef default fill:#ffffff,stroke:#333333,stroke-width:1px,color:#000000,font-weight:bold
 
     class API source
     class E,T,K process
