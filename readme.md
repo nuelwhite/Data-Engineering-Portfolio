@@ -26,7 +26,7 @@ Movie_Analysis/
 ## System Architecture
 
 ```mermaid
-graph TB
+graph LR
     subgraph "Data Sources"
         API[TMDB API]
     end
