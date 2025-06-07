@@ -2,4 +2,6 @@
 .env
 
 
+#ignore pycache
+__pycache__/
 
