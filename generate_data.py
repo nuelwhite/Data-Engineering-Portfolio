@@ -8,7 +8,8 @@ fake = Faker()
 
 def ensure_data_directory():
     """Create the data directory if it doesn't exist."""
-    data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
+    parent_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(parent_dir, 'data')
     os.makedirs(data_dir, exist_ok=True)
     return data_dir
 
@@ -36,7 +37,7 @@ def generate_patient_data(number_of_patients=1000):
             'date_of_birth' : fake.date_of_birth(minimum_age=18, maximum_age=100),
             'gender' : random.choice(['Male', 'Female']),
             'phone_number' : f"+233{random.choice(prefixes)}{fake.numerify('#######')}",
-            'address' : fake.address(),
+            'address' : fake.address().replace('\n', ', '),
             'blood_type' : random.choice(['A+', 'B+', 'A-', 'B-', 'AB+', 'AB-', 'O+', 'O-']),
             'insurance_number' : f"INS{fake.unique.random_int(min=1000000, max=9999999)}",
             'updated_at' : fake.date_time_this_decade()
@@ -215,7 +216,7 @@ if __name__ == "__main__":
     data_dir = ensure_data_directory()
     
     # Generate and save all data
-    patients_data = save_generator_to_csv(generate_patient_data, os.path.join(data_dir, 'patients_data.csv'))
+    save_generator_to_csv(generate_patient_data, os.path.join(data_dir, 'patients_data.csv'))
     save_generator_to_csv(generate_billing_data, os.path.join(data_dir, 'billing_data.csv'))
     save_generator_to_csv(generate_appointment_data, os.path.join(data_dir, 'appointments_data.csv'))
     save_generator_to_csv(generate_prescription_data, os.path.join(data_dir, 'prescriptions_data.csv'))
