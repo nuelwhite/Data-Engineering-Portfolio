@@ -1,121 +1,87 @@
 import logging
-from sqlalchemy import text
+import json
+import os
 from datetime import datetime
+from pathlib import Path
 
 # Initialize logger for tracking pipeline operations
 logger = logging.getLogger(__name__)
 
 class IdempotencyHandler:
-    """Handles idempotency in data pipelines to prevent duplicates"""
+    """Handles idempotency in data pipelines using file-based tracking"""
     
-    @staticmethod
-    def create_idempotency_table(engine, table_name):
+    def __init__(self, tracking_dir='tracking'):
         """
-        Create an idempotency tracking table if it doesn't exist.
+        Initialize the idempotency handler.
         
         Args:
-            engine: SQLAlchemy engine
-            table_name: Name of the table to track
+            tracking_dir: Directory to store tracking files
         """
-        try:
-            # SQL query to create the idempotency tracking table
-            # This table stores the processing state for each pipeline run
-            create_table_query = f"""
-            CREATE TABLE IF NOT EXISTS pipeline_idempotency (
-                id SERIAL PRIMARY KEY,                    -- Unique identifier for each tracking record
-                table_name VARCHAR(255),                  -- Name of the table being processed
-                last_processed_id VARCHAR(255),           -- Last successfully processed record ID
-                last_processed_timestamp TIMESTAMP,       -- When the last record was processed
-                batch_size INTEGER,                       -- Size of the last processed batch
-                status VARCHAR(50),                       -- Processing status (completed/failed)
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- When this tracking record was created
-            )
-            """
-            
-            # Execute the table creation query
-            with engine.connect() as connection:
-                connection.execute(text(create_table_query))
-                connection.commit()  # Commit the transaction
-                
-            logger.info(f"Created idempotency tracking table for {table_name}")
-            
-        except Exception as e:
-            logger.error(f"Error creating idempotency table: {str(e)}")
-            raise
-
-    @staticmethod
-    def get_last_processed_id(engine, table_name):
+        # Create tracking directory if it doesn't exist
+        self.tracking_dir = Path(tracking_dir)
+        self.tracking_dir.mkdir(parents=True, exist_ok=True)
+        
+    def get_tracking_file(self, table_name):
+        """Get the path to the tracking file for a table"""
+        return self.tracking_dir / f"{table_name}_tracking.json"
+    
+    def get_last_processed_id(self, table_name):
         """
-        Get the last processed ID for a table.
+        Get the last processed ID for a table from the tracking file.
         
         Args:
-            engine: SQLAlchemy engine
             table_name: Name of the table to check
             
         Returns:
             str: Last processed ID or None if no records
         """
         try:
-            # Query to get the most recent processing record for the table
-            # ORDER BY created_at DESC ensures we get the latest record
-            query = text("""
-                SELECT last_processed_id 
-                FROM pipeline_idempotency 
-                WHERE table_name = :table_name 
-                ORDER BY created_at DESC 
-                LIMIT 1
-            """)
+            tracking_file = self.get_tracking_file(table_name)
             
-            with engine.connect() as connection:
-                result = connection.execute(query, {"table_name": table_name}).fetchone()
-                return result[0] if result else None  # Return None if no records found
+            if not tracking_file.exists():
+                return None
+                
+            with open(tracking_file, 'r') as f:
+                tracking_data = json.load(f)
+                return tracking_data.get('last_processed_id')
                 
         except Exception as e:
-            logger.error(f"Error getting last processed ID: {str(e)}")
-            raise
-
-    @staticmethod
-    def update_processing_status(engine, table_name, last_id, batch_size, status='completed'):
+            logger.error(f"Error reading tracking file: {str(e)}")
+            return None
+    
+    def update_processing_status(self, table_name, last_id, batch_size, status='completed'):
         """
-        Update the processing status for a table.
+        Update the processing status in the tracking file.
         
         Args:
-            engine: SQLAlchemy engine
             table_name: Name of the table being processed
             last_id: Last processed ID
             batch_size: Size of the processed batch
             status: Processing status
         """
         try:
-            # Insert a new record to track the processing status
-            # This creates an audit trail of all pipeline runs
-            query = text("""
-                INSERT INTO pipeline_idempotency 
-                (table_name, last_processed_id, last_processed_timestamp, batch_size, status)
-                VALUES (:table_name, :last_id, :timestamp, :batch_size, :status)
-            """)
+            tracking_file = self.get_tracking_file(table_name)
             
-            with engine.connect() as connection:
-                connection.execute(
-                    query,
-                    {
-                        "table_name": table_name,
-                        "last_id": last_id,
-                        "timestamp": datetime.now(),  # Current timestamp for tracking
-                        "batch_size": batch_size,
-                        "status": status
-                    }
-                )
-                connection.commit()  # Commit the transaction
+            # Create or update tracking data
+            tracking_data = {
+                'table_name': table_name,
+                'last_processed_id': last_id,
+                'last_processed_timestamp': datetime.now().isoformat(),
+                'batch_size': batch_size,
+                'status': status
+            }
+            
+            # Write to tracking file
+            with open(tracking_file, 'w') as f:
+                json.dump(tracking_data, f, indent=2)
                 
             logger.info(f"Updated processing status for {table_name}")
             
         except Exception as e:
-            logger.error(f"Error updating processing status: {str(e)}")
+            logger.error(f"Error updating tracking file: {str(e)}")
             raise
-
-    @staticmethod
-    def process_in_batches(engine, table_name, id_column, batch_size=1000):
+    
+    def process_in_batches(self, engine, table_name, id_column, batch_size=1000):
         """
         Process data in batches with idempotency.
         
@@ -130,27 +96,25 @@ class IdempotencyHandler:
         """
         try:
             # Get the last successfully processed ID
-            # This ensures we don't reprocess already processed records
-            last_processed_id = IdempotencyHandler.get_last_processed_id(engine, table_name)
+            last_processed_id = self.get_last_processed_id(table_name)
             
             while True:
                 # Build query based on whether we have a last processed ID
-                # This is the key to idempotency - we only process records after the last processed ID
                 if last_processed_id:
-                    query = text(f"""
+                    query = f"""
                         SELECT * FROM {table_name}
                         WHERE {id_column} > :last_id  -- Only get records after last processed ID
                         ORDER BY {id_column}          -- Ensure consistent ordering
                         LIMIT :batch_size            -- Process in manageable chunks
-                    """)
+                    """
                     params = {"last_id": last_processed_id, "batch_size": batch_size}
                 else:
                     # If no last processed ID, start from the beginning
-                    query = text(f"""
+                    query = f"""
                         SELECT * FROM {table_name}
                         ORDER BY {id_column}
                         LIMIT :batch_size
-                    """)
+                    """
                     params = {"batch_size": batch_size}
                 
                 # Execute the query and get the batch
@@ -166,8 +130,7 @@ class IdempotencyHandler:
                     yield batch, last_id  # Yield the batch and its last ID
                     
                     # Update the processing status after each successful batch
-                    IdempotencyHandler.update_processing_status(
-                        engine, 
+                    self.update_processing_status(
                         table_name, 
                         last_id, 
                         len(batch)
