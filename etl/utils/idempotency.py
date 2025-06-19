@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
+from sqlalchemy import text
 
 # Initialize logger for tracking pipeline operations
 logger = logging.getLogger(__name__)
@@ -101,26 +102,26 @@ class IdempotencyHandler:
             while True:
                 # Build query based on whether we have a last processed ID
                 if last_processed_id:
-                    query = f"""
+                    query = text(f"""
                         SELECT * FROM {table_name}
                         WHERE {id_column} > :last_id  -- Only get records after last processed ID
                         ORDER BY {id_column}          -- Ensure consistent ordering
                         LIMIT :batch_size            -- Process in manageable chunks
-                    """
+                    """)
                     params = {"last_id": last_processed_id, "batch_size": batch_size}
                 else:
                     # If no last processed ID, start from the beginning
-                    query = f"""
+                    query = text(f"""
                         SELECT * FROM {table_name}
                         ORDER BY {id_column}
                         LIMIT :batch_size
-                    """
+                    """)
                     params = {"batch_size": batch_size}
                 
-                # Execute the query and get the batch
+                # Execute the query and get the batch as mappings (dict-like rows)
                 with engine.connect() as connection:
                     result = connection.execute(query, params)
-                    batch = result.fetchall()
+                    batch = result.mappings().all()
                     
                     if not batch:
                         break  # No more records to process
