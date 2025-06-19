@@ -59,11 +59,11 @@ class DatabaseConfig:
             # PostgreSQL connection parameters
             postgres_config = {
                 'drivername': 'postgresql',
-                'username': os.getenv('POSTGRES_DB_USER'),
-                'password': os.getenv('POSTGRES_DB_PASSWORD'),
-                'host': os.getenv('POSTGRES_DB_HOST'),
-                'port': os.getenv('POSTGRES_DB_PORT'),
-                'database': os.getenv('POSTGRES_DB_NAME')
+                'username': os.getenv('POSTGRES_USER'),
+                'password': os.getenv('POSTGRES_PASSWORD'),
+                'host': os.getenv('POSTGRES_HOST'),
+                'port': os.getenv('POSTGRES_PORT'),
+                'database': os.getenv('POSTGRES_DB')
             }
             
             # Create connection URL
