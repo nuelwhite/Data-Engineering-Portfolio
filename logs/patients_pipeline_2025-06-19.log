@@ -1,0 +1,14 @@
+2025-06-19 11:49:09,232 - patients_pipeline - INFO - 58 - Logger initialized. Log file: logs\patients_pipeline_2025-06-19.log
+2025-06-19 11:49:09,233 - patients_pipeline - INFO - 101 - Starting patients data pipeline...
+2025-06-19 11:49:09,788 - patients_pipeline - INFO - 48 - Target table patients_demographics already exists
+2025-06-19 11:49:09,963 - patients_pipeline - INFO - 125 - Processing batch with 500 records (DataFrame shape: (500, 13))
+2025-06-19 11:49:09,963 - patients_pipeline - INFO - 126 - DataFrame columns: ['blood_type', 'date_of_birth', 'first_name', 'gender', 'insurance_number', 'last_name', 'patient_id', 'phone_number', 'updated_at', 'street', 'city', 'state', 'zip']
+2025-06-19 11:49:10,193 - patients_pipeline - INFO - 140 - Processed batch up to ID: PT0500
+2025-06-19 11:49:10,328 - patients_pipeline - INFO - 125 - Processing batch with 500 records (DataFrame shape: (500, 13))
+2025-06-19 11:49:10,330 - patients_pipeline - INFO - 126 - DataFrame columns: ['blood_type', 'date_of_birth', 'first_name', 'gender', 'insurance_number', 'last_name', 'patient_id', 'phone_number', 'updated_at', 'street', 'city', 'state', 'zip']
+2025-06-19 11:49:10,472 - patients_pipeline - INFO - 140 - Processed batch up to ID: PT1000
+2025-06-19 11:49:10,478 - patients_pipeline - INFO - 153 - Patients data pipeline completed successfully
+2025-06-19 23:02:26,705 - patients_pipeline - INFO - 58 - Logger initialized. Log file: logs\patients_pipeline_2025-06-19.log
+2025-06-19 23:02:26,731 - patients_pipeline - INFO - 101 - Starting patients data pipeline...
+2025-06-19 23:02:27,054 - patients_pipeline - INFO - 48 - Target table patients_demographics already exists
+2025-06-19 23:02:27,061 - patients_pipeline - INFO - 153 - Patients data pipeline completed successfully

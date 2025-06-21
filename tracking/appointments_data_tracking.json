@@ -1,0 +1,7 @@
+{
+  "table_name": "appointments_data",
+  "last_processed_id": "APPT1500",
+  "last_processed_timestamp": "2025-06-19T13:12:15.066689",
+  "batch_size": 500,
+  "status": "completed"
+}

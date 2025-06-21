@@ -1,0 +1,11 @@
+2025-06-19 13:12:14,277 - appointments_pipeline - INFO - 58 - Logger initialized. Log file: logs\appointments_pipeline_2025-06-19.log
+2025-06-19 13:12:14,278 - appointments_pipeline - INFO - 95 - Starting appointments data pipeline...
+2025-06-19 13:12:14,676 - appointments_pipeline - INFO - 44 - Created target table: appointments_data
+2025-06-19 13:12:14,818 - appointments_pipeline - INFO - 132 - Processed batch up to ID: APPT0500
+2025-06-19 13:12:14,944 - appointments_pipeline - INFO - 132 - Processed batch up to ID: APPT1000
+2025-06-19 13:12:15,065 - appointments_pipeline - INFO - 132 - Processed batch up to ID: APPT1500
+2025-06-19 13:12:15,075 - appointments_pipeline - INFO - 145 - Appointments data pipeline completed successfully
+2025-06-19 23:02:26,712 - appointments_pipeline - INFO - 58 - Logger initialized. Log file: logs\appointments_pipeline_2025-06-19.log
+2025-06-19 23:02:27,136 - appointments_pipeline - INFO - 95 - Starting appointments data pipeline...
+2025-06-19 23:02:27,194 - appointments_pipeline - INFO - 46 - Target table appointments_data already exists
+2025-06-19 23:02:27,200 - appointments_pipeline - INFO - 145 - Appointments data pipeline completed successfully

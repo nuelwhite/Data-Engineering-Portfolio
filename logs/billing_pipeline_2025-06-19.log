@@ -1,0 +1,13 @@
+2025-06-19 12:34:16,525 - billing_pipeline - INFO - 58 - Logger initialized. Log file: logs\billing_pipeline_2025-06-19.log
+2025-06-19 12:34:16,527 - billing_pipeline - INFO - 99 - Starting billing data pipeline...
+2025-06-19 12:34:17,339 - billing_pipeline - INFO - 44 - Created target table: billing_data
+2025-06-19 12:34:17,497 - billing_pipeline - INFO - 136 - Processed batch up to ID: INV0500
+2025-06-19 12:34:17,613 - billing_pipeline - INFO - 136 - Processed batch up to ID: INV1000
+2025-06-19 12:34:17,726 - billing_pipeline - INFO - 136 - Processed batch up to ID: INV1500
+2025-06-19 12:34:17,838 - billing_pipeline - INFO - 136 - Processed batch up to ID: INV2000
+2025-06-19 12:34:17,950 - billing_pipeline - INFO - 136 - Processed batch up to ID: INV2500
+2025-06-19 12:34:17,958 - billing_pipeline - INFO - 149 - Billing data pipeline completed successfully
+2025-06-19 23:02:26,709 - billing_pipeline - INFO - 58 - Logger initialized. Log file: logs\billing_pipeline_2025-06-19.log
+2025-06-19 23:02:27,065 - billing_pipeline - INFO - 99 - Starting billing data pipeline...
+2025-06-19 23:02:27,122 - billing_pipeline - INFO - 46 - Target table billing_data already exists
+2025-06-19 23:02:27,132 - billing_pipeline - INFO - 149 - Billing data pipeline completed successfully

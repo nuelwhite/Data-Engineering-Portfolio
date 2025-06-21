@@ -1,0 +1,7 @@
+{
+  "table_name": "inventory_items",
+  "last_processed_id": "STR500",
+  "last_processed_timestamp": "2025-06-19T13:23:55.367350",
+  "batch_size": 500,
+  "status": "completed"
+}

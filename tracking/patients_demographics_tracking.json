@@ -1,0 +1,7 @@
+{
+  "table_name": "patients_demographics",
+  "last_processed_id": "PT1000",
+  "last_processed_timestamp": "2025-06-19T11:49:10.473126",
+  "batch_size": 500,
+  "status": "completed"
+}

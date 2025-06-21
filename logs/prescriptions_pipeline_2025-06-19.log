@@ -1,0 +1,13 @@
+2025-06-19 13:24:55,609 - prescriptions_pipeline - INFO - 58 - Logger initialized. Log file: logs\prescriptions_pipeline_2025-06-19.log
+2025-06-19 13:24:55,610 - prescriptions_pipeline - INFO - 95 - Starting prescriptions data pipeline...
+2025-06-19 13:24:55,940 - prescriptions_pipeline - INFO - 44 - Created target table: prescriptions_data
+2025-06-19 13:24:56,043 - prescriptions_pipeline - INFO - 132 - Processed batch up to ID: RX0500
+2025-06-19 13:24:56,168 - prescriptions_pipeline - INFO - 132 - Processed batch up to ID: RX1000
+2025-06-19 13:24:56,291 - prescriptions_pipeline - INFO - 132 - Processed batch up to ID: RX1500
+2025-06-19 13:24:56,415 - prescriptions_pipeline - INFO - 132 - Processed batch up to ID: RX2000
+2025-06-19 13:24:56,536 - prescriptions_pipeline - INFO - 132 - Processed batch up to ID: RX2500
+2025-06-19 13:24:56,548 - prescriptions_pipeline - INFO - 145 - Prescriptions data pipeline completed successfully
+2025-06-19 23:02:26,715 - prescriptions_pipeline - INFO - 58 - Logger initialized. Log file: logs\prescriptions_pipeline_2025-06-19.log
+2025-06-19 23:02:27,205 - prescriptions_pipeline - INFO - 95 - Starting prescriptions data pipeline...
+2025-06-19 23:02:27,263 - prescriptions_pipeline - INFO - 46 - Target table prescriptions_data already exists
+2025-06-19 23:02:27,272 - prescriptions_pipeline - INFO - 145 - Prescriptions data pipeline completed successfully

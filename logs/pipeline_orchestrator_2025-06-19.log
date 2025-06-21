@@ -1,0 +1,15 @@
+2025-06-19 23:02:26,723 - pipeline_orchestrator - INFO - 58 - Logger initialized. Log file: logs\pipeline_orchestrator_2025-06-19.log
+2025-06-19 23:02:26,725 - pipeline_orchestrator - INFO - 35 - Starting HMS data pipeline orchestration
+2025-06-19 23:02:26,730 - pipeline_orchestrator - INFO - 36 - Pipelines to run: patients, billing, appointments, prescriptions, inventory
+2025-06-19 23:02:26,730 - pipeline_orchestrator - INFO - 41 - Starting patients pipeline
+2025-06-19 23:02:27,063 - pipeline_orchestrator - INFO - 46 - Successfully completed patients pipeline in 0:00:00.332369
+2025-06-19 23:02:27,064 - pipeline_orchestrator - INFO - 41 - Starting billing pipeline
+2025-06-19 23:02:27,134 - pipeline_orchestrator - INFO - 46 - Successfully completed billing pipeline in 0:00:00.069287
+2025-06-19 23:02:27,135 - pipeline_orchestrator - INFO - 41 - Starting appointments pipeline
+2025-06-19 23:02:27,203 - pipeline_orchestrator - INFO - 46 - Successfully completed appointments pipeline in 0:00:00.067771
+2025-06-19 23:02:27,204 - pipeline_orchestrator - INFO - 41 - Starting prescriptions pipeline
+2025-06-19 23:02:27,274 - pipeline_orchestrator - INFO - 46 - Successfully completed prescriptions pipeline in 0:00:00.069800
+2025-06-19 23:02:27,275 - pipeline_orchestrator - INFO - 41 - Starting inventory pipeline
+2025-06-19 23:02:27,353 - pipeline_orchestrator - INFO - 46 - Successfully completed inventory pipeline in 0:00:00.077981
+2025-06-19 23:02:27,354 - pipeline_orchestrator - INFO - 57 - Pipeline orchestration completed in 0:00:00.629884
+2025-06-19 23:02:27,355 - pipeline_orchestrator - INFO - 64 - All pipelines completed successfully!
