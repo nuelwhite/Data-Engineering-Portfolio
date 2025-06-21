@@ -26,6 +26,7 @@ This is currently a **batch processing simulation**. In future upgrades, I plan 
 ## 🏗️ System Architecture
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial' }}}%%
 graph LR
     subgraph "Source"
         MySQL[(MySQL<br/>Source Data)]
@@ -56,9 +57,9 @@ graph LR
     P4 --> PG
     P5 --> PG
 
-    style MySQL fill:#f9f,stroke:#333,stroke-width:2px
-    style PG fill:#bbf,stroke:#333,stroke-width:2px
-    style ORCH fill:#bfb,stroke:#333,stroke-width:2px
+    style MySQL fill:#f9f,stroke:#333,stroke-width:2px,color:#000
+    style PG fill:#bbf,stroke:#333,stroke-width:2px,color:#000
+    style ORCH fill:#bfb,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ### Architecture Overview
