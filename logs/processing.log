@@ -1,0 +1,164 @@
+2025-07-22 13:04:31,195 - INFO - Starting chunked processing...
+2025-07-22 13:04:31,524 - INFO - Chunk 1: Original shape = (100000, 8)
+2025-07-22 13:10:29,307 - INFO - Starting chunked processing...
+2025-07-22 13:10:29,518 - INFO - Chunk 1: Original shape = (100000, 8)
+2025-07-22 13:10:31,542 - INFO - Chunk 1 processed. Rows: 71209 | Memory Before: 71.10 MB, After: 93.36 MB, Delta: 22.25 MB
+2025-07-22 13:10:32,376 - INFO - Chunk 2: Original shape = (100000, 8)
+2025-07-22 13:10:34,828 - INFO - Chunk 2 processed. Rows: 71496 | Memory Before: 95.07 MB, After: 97.96 MB, Delta: 2.89 MB
+2025-07-22 13:10:35,443 - INFO - Chunk 3: Original shape = (100000, 8)
+2025-07-22 13:10:37,585 - INFO - Chunk 3 processed. Rows: 71330 | Memory Before: 98.26 MB, After: 100.54 MB, Delta: 2.29 MB
+2025-07-22 13:10:38,230 - INFO - Chunk 4: Original shape = (100000, 8)
+2025-07-22 13:10:40,377 - INFO - Chunk 4 processed. Rows: 71460 | Memory Before: 100.02 MB, After: 99.41 MB, Delta: -0.61 MB
+2025-07-22 13:10:41,021 - INFO - Chunk 5: Original shape = (100000, 8)
+2025-07-22 13:10:43,162 - INFO - Chunk 5 processed. Rows: 71259 | Memory Before: 100.17 MB, After: 103.02 MB, Delta: 2.85 MB
+2025-07-22 13:10:43,904 - INFO - Chunk 6: Original shape = (100000, 8)
+2025-07-22 13:10:46,112 - INFO - Chunk 6 processed. Rows: 71147 | Memory Before: 102.49 MB, After: 102.98 MB, Delta: 0.48 MB
+2025-07-22 13:10:46,931 - INFO - Chunk 7: Original shape = (100000, 8)
+2025-07-22 13:10:49,686 - INFO - Chunk 7 processed. Rows: 71539 | Memory Before: 102.98 MB, After: 104.59 MB, Delta: 1.61 MB
+2025-07-22 13:10:50,429 - INFO - Chunk 8: Original shape = (100000, 8)
+2025-07-22 13:10:52,792 - INFO - Chunk 8 processed. Rows: 71441 | Memory Before: 104.80 MB, After: 104.36 MB, Delta: -0.45 MB
+2025-07-22 13:10:53,530 - INFO - Chunk 9: Original shape = (100000, 8)
+2025-07-22 13:10:55,957 - INFO - Chunk 9 processed. Rows: 71618 | Memory Before: 104.35 MB, After: 115.88 MB, Delta: 11.53 MB
+2025-07-22 13:10:56,659 - INFO - Chunk 10: Original shape = (100000, 8)
+2025-07-22 13:10:58,976 - INFO - Chunk 10 processed. Rows: 71618 | Memory Before: 115.09 MB, After: 108.04 MB, Delta: -7.05 MB
+2025-07-22 13:10:59,750 - INFO - Chunk 11: Original shape = (100000, 8)
+2025-07-22 13:11:02,105 - INFO - Chunk 11 processed. Rows: 71443 | Memory Before: 108.85 MB, After: 105.81 MB, Delta: -3.04 MB
+2025-07-22 13:11:02,804 - INFO - Chunk 12: Original shape = (100000, 8)
+2025-07-22 13:11:05,045 - INFO - Chunk 12 processed. Rows: 71194 | Memory Before: 106.03 MB, After: 108.34 MB, Delta: 2.31 MB
+2025-07-22 13:11:05,707 - INFO - Chunk 13: Original shape = (100000, 8)
+2025-07-22 13:11:07,901 - INFO - Chunk 13 processed. Rows: 71430 | Memory Before: 109.11 MB, After: 104.52 MB, Delta: -4.59 MB
+2025-07-22 13:11:08,584 - INFO - Chunk 14: Original shape = (100000, 8)
+2025-07-22 13:11:10,985 - INFO - Chunk 14 processed. Rows: 71344 | Memory Before: 104.53 MB, After: 109.22 MB, Delta: 4.69 MB
+2025-07-22 13:11:11,689 - INFO - Chunk 15: Original shape = (100000, 8)
+2025-07-22 13:11:14,685 - INFO - Chunk 15 processed. Rows: 71416 | Memory Before: 109.97 MB, After: 106.37 MB, Delta: -3.60 MB
+2025-07-22 13:11:15,592 - INFO - Chunk 16: Original shape = (100000, 8)
+2025-07-22 13:11:18,081 - INFO - Chunk 16 processed. Rows: 71339 | Memory Before: 106.39 MB, After: 109.66 MB, Delta: 3.28 MB
+2025-07-22 13:11:18,806 - INFO - Chunk 17: Original shape = (100000, 8)
+2025-07-22 13:11:21,135 - INFO - Chunk 17 processed. Rows: 71563 | Memory Before: 110.41 MB, After: 108.09 MB, Delta: -2.32 MB
+2025-07-22 13:11:22,004 - INFO - Chunk 18: Original shape = (100000, 8)
+2025-07-22 13:11:24,566 - INFO - Chunk 18 processed. Rows: 71527 | Memory Before: 108.32 MB, After: 109.75 MB, Delta: 1.43 MB
+2025-07-22 13:11:25,329 - INFO - Chunk 19: Original shape = (100000, 8)
+2025-07-22 13:11:27,671 - INFO - Chunk 19 processed. Rows: 71432 | Memory Before: 110.53 MB, After: 106.72 MB, Delta: -3.81 MB
+2025-07-22 13:11:28,446 - INFO - Chunk 20: Original shape = (100000, 8)
+2025-07-22 13:11:30,922 - INFO - Chunk 20 processed. Rows: 71475 | Memory Before: 106.89 MB, After: 108.85 MB, Delta: 1.96 MB
+2025-07-22 13:11:31,769 - INFO - Chunk 21: Original shape = (100000, 8)
+2025-07-22 13:11:34,236 - INFO - Chunk 21 processed. Rows: 71414 | Memory Before: 109.61 MB, After: 107.34 MB, Delta: -2.28 MB
+2025-07-22 13:11:34,984 - INFO - Chunk 22: Original shape = (100000, 8)
+2025-07-22 13:11:37,383 - INFO - Chunk 22 processed. Rows: 71390 | Memory Before: 106.81 MB, After: 110.38 MB, Delta: 3.57 MB
+2025-07-22 13:11:38,206 - INFO - Chunk 23: Original shape = (100000, 8)
+2025-07-22 13:11:40,711 - INFO - Chunk 23 processed. Rows: 71774 | Memory Before: 110.38 MB, After: 109.55 MB, Delta: -0.83 MB
+2025-07-22 13:11:41,482 - INFO - Chunk 24: Original shape = (100000, 8)
+2025-07-22 13:11:44,015 - INFO - Chunk 24 processed. Rows: 71598 | Memory Before: 109.00 MB, After: 113.02 MB, Delta: 4.02 MB
+2025-07-22 13:11:44,787 - INFO - Chunk 25: Original shape = (100000, 8)
+2025-07-22 13:11:47,394 - INFO - Chunk 25 processed. Rows: 71607 | Memory Before: 110.48 MB, After: 110.52 MB, Delta: 0.05 MB
+2025-07-22 13:11:48,146 - INFO - Chunk 26: Original shape = (100000, 8)
+2025-07-22 13:11:50,821 - INFO - Chunk 26 processed. Rows: 71368 | Memory Before: 109.98 MB, After: 110.94 MB, Delta: 0.96 MB
+2025-07-22 13:11:51,580 - INFO - Chunk 27: Original shape = (100000, 8)
+2025-07-22 13:11:53,997 - INFO - Chunk 27 processed. Rows: 71635 | Memory Before: 110.95 MB, After: 111.76 MB, Delta: 0.82 MB
+2025-07-22 13:11:54,766 - INFO - Chunk 28: Original shape = (100000, 8)
+2025-07-22 13:11:57,335 - INFO - Chunk 28 processed. Rows: 71231 | Memory Before: 111.97 MB, After: 112.21 MB, Delta: 0.24 MB
+2025-07-22 13:11:58,127 - INFO - Chunk 29: Original shape = (100000, 8)
+2025-07-22 13:12:00,583 - INFO - Chunk 29 processed. Rows: 71535 | Memory Before: 111.70 MB, After: 115.04 MB, Delta: 3.34 MB
+2025-07-22 13:12:01,355 - INFO - Chunk 30: Original shape = (100000, 8)
+2025-07-22 13:12:04,041 - INFO - Chunk 30 processed. Rows: 71490 | Memory Before: 111.41 MB, After: 111.65 MB, Delta: 0.24 MB
+2025-07-22 13:12:04,914 - INFO - Chunk 31: Original shape = (100000, 8)
+2025-07-22 13:12:07,620 - INFO - Chunk 31 processed. Rows: 71434 | Memory Before: 112.43 MB, After: 115.03 MB, Delta: 2.60 MB
+2025-07-22 13:12:08,365 - INFO - Chunk 32: Original shape = (100000, 8)
+2025-07-22 13:12:10,926 - INFO - Chunk 32 processed. Rows: 71227 | Memory Before: 112.17 MB, After: 111.57 MB, Delta: -0.60 MB
+2025-07-22 13:12:11,721 - INFO - Chunk 33: Original shape = (100000, 8)
+2025-07-22 13:12:14,346 - INFO - Chunk 33 processed. Rows: 71502 | Memory Before: 112.33 MB, After: 115.95 MB, Delta: 3.61 MB
+2025-07-22 13:12:15,287 - INFO - Chunk 34: Original shape = (100000, 8)
+2025-07-22 13:12:17,946 - INFO - Chunk 34 processed. Rows: 71430 | Memory Before: 112.45 MB, After: 116.24 MB, Delta: 3.79 MB
+2025-07-22 13:12:18,768 - INFO - Chunk 35: Original shape = (100000, 8)
+2025-07-22 13:12:21,380 - INFO - Chunk 35 processed. Rows: 71479 | Memory Before: 113.46 MB, After: 111.20 MB, Delta: -2.26 MB
+2025-07-22 13:12:22,231 - INFO - Chunk 36: Original shape = (100000, 8)
+2025-07-22 13:12:24,908 - INFO - Chunk 36 processed. Rows: 71365 | Memory Before: 111.20 MB, After: 112.27 MB, Delta: 1.07 MB
+2025-07-22 13:12:25,845 - INFO - Chunk 37: Original shape = (100000, 8)
+2025-07-22 13:12:28,265 - INFO - Chunk 37 processed. Rows: 71112 | Memory Before: 112.28 MB, After: 112.78 MB, Delta: 0.50 MB
+2025-07-22 13:12:29,194 - INFO - Chunk 38: Original shape = (100000, 8)
+2025-07-22 13:12:31,737 - INFO - Chunk 38 processed. Rows: 71501 | Memory Before: 112.79 MB, After: 114.87 MB, Delta: 2.07 MB
+2025-07-22 13:12:32,621 - INFO - Chunk 39: Original shape = (100000, 8)
+2025-07-22 13:12:35,282 - INFO - Chunk 39 processed. Rows: 71640 | Memory Before: 113.59 MB, After: 112.85 MB, Delta: -0.74 MB
+2025-07-22 13:12:36,073 - INFO - Chunk 40: Original shape = (100000, 8)
+2025-07-22 13:12:38,709 - INFO - Chunk 40 processed. Rows: 70992 | Memory Before: 112.85 MB, After: 112.78 MB, Delta: -0.07 MB
+2025-07-22 13:12:39,462 - INFO - Chunk 41: Original shape = (100000, 8)
+2025-07-22 13:12:42,247 - INFO - Chunk 41 processed. Rows: 71429 | Memory Before: 113.54 MB, After: 112.24 MB, Delta: -1.30 MB
+2025-07-22 13:12:43,023 - INFO - Chunk 42: Original shape = (100000, 8)
+2025-07-22 13:12:45,549 - INFO - Chunk 42 processed. Rows: 71582 | Memory Before: 112.24 MB, After: 112.80 MB, Delta: 0.56 MB
+2025-07-22 13:12:46,335 - INFO - Chunk 43: Original shape = (100000, 8)
+2025-07-22 13:12:48,810 - INFO - Chunk 43 processed. Rows: 71521 | Memory Before: 113.57 MB, After: 114.91 MB, Delta: 1.34 MB
+2025-07-22 13:12:49,580 - INFO - Chunk 44: Original shape = (100000, 8)
+2025-07-22 13:12:52,234 - INFO - Chunk 44 processed. Rows: 71423 | Memory Before: 113.57 MB, After: 114.73 MB, Delta: 1.16 MB
+2025-07-22 13:12:52,966 - INFO - Chunk 45: Original shape = (100000, 8)
+2025-07-22 13:12:55,504 - INFO - Chunk 45 processed. Rows: 71397 | Memory Before: 111.71 MB, After: 111.17 MB, Delta: -0.54 MB
+2025-07-22 13:12:56,250 - INFO - Chunk 46: Original shape = (100000, 8)
+2025-07-22 13:12:58,716 - INFO - Chunk 46 processed. Rows: 71487 | Memory Before: 111.16 MB, After: 111.17 MB, Delta: 0.01 MB
+2025-07-22 13:12:59,407 - INFO - Chunk 47: Original shape = (100000, 8)
+2025-07-22 13:13:01,944 - INFO - Chunk 47 processed. Rows: 71487 | Memory Before: 111.16 MB, After: 115.80 MB, Delta: 4.64 MB
+2025-07-22 13:13:02,738 - INFO - Chunk 48: Original shape = (100000, 8)
+2025-07-22 13:13:05,406 - INFO - Chunk 48 processed. Rows: 71678 | Memory Before: 113.57 MB, After: 115.98 MB, Delta: 2.41 MB
+2025-07-22 13:13:06,129 - INFO - Chunk 49: Original shape = (100000, 8)
+2025-07-22 13:13:08,944 - INFO - Chunk 49 processed. Rows: 71527 | Memory Before: 112.28 MB, After: 115.88 MB, Delta: 3.61 MB
+2025-07-22 13:13:09,903 - INFO - Chunk 50: Original shape = (100000, 8)
+2025-07-22 13:13:12,393 - INFO - Chunk 50 processed. Rows: 71622 | Memory Before: 112.80 MB, After: 115.76 MB, Delta: 2.95 MB
+2025-07-22 13:13:13,107 - INFO - Chunk 51: Original shape = (100000, 8)
+2025-07-22 13:13:15,548 - INFO - Chunk 51 processed. Rows: 71251 | Memory Before: 113.59 MB, After: 114.65 MB, Delta: 1.06 MB
+2025-07-22 13:13:16,325 - INFO - Chunk 52: Original shape = (100000, 8)
+2025-07-22 13:13:18,661 - INFO - Chunk 52 processed. Rows: 71555 | Memory Before: 112.24 MB, After: 112.82 MB, Delta: 0.58 MB
+2025-07-22 13:13:19,362 - INFO - Chunk 53: Original shape = (100000, 8)
+2025-07-22 13:13:21,685 - INFO - Chunk 53 processed. Rows: 71543 | Memory Before: 113.60 MB, After: 115.91 MB, Delta: 2.31 MB
+2025-07-22 13:13:22,410 - INFO - Chunk 54: Original shape = (100000, 8)
+2025-07-22 13:13:25,153 - INFO - Chunk 54 processed. Rows: 71370 | Memory Before: 112.29 MB, After: 115.84 MB, Delta: 3.55 MB
+2025-07-22 13:13:25,933 - INFO - Chunk 55: Original shape = (100000, 8)
+2025-07-22 13:13:28,733 - INFO - Chunk 55 processed. Rows: 71641 | Memory Before: 112.27 MB, After: 115.77 MB, Delta: 3.50 MB
+2025-07-22 13:13:29,541 - INFO - Chunk 56: Original shape = (100000, 8)
+2025-07-22 13:13:31,890 - INFO - Chunk 56 processed. Rows: 71192 | Memory Before: 112.96 MB, After: 113.47 MB, Delta: 0.51 MB
+2025-07-22 13:13:32,635 - INFO - Chunk 57: Original shape = (100000, 8)
+2025-07-22 13:13:35,141 - INFO - Chunk 57 processed. Rows: 71447 | Memory Before: 121.16 MB, After: 116.41 MB, Delta: -4.75 MB
+2025-07-22 13:13:35,935 - INFO - Chunk 58: Original shape = (100000, 8)
+2025-07-22 13:13:38,565 - INFO - Chunk 58 processed. Rows: 71505 | Memory Before: 113.70 MB, After: 112.94 MB, Delta: -0.75 MB
+2025-07-22 13:13:39,329 - INFO - Chunk 59: Original shape = (100000, 8)
+2025-07-22 13:13:41,723 - INFO - Chunk 59 processed. Rows: 71328 | Memory Before: 120.47 MB, After: 111.30 MB, Delta: -9.17 MB
+2025-07-22 13:13:42,511 - INFO - Chunk 60: Original shape = (100000, 8)
+2025-07-22 13:13:45,029 - INFO - Chunk 60 processed. Rows: 71483 | Memory Before: 110.76 MB, After: 111.32 MB, Delta: 0.56 MB
+2025-07-22 13:13:45,785 - INFO - Chunk 61: Original shape = (100000, 8)
+2025-07-22 13:13:48,172 - INFO - Chunk 61 processed. Rows: 71453 | Memory Before: 112.08 MB, After: 111.32 MB, Delta: -0.76 MB
+2025-07-22 13:13:49,069 - INFO - Chunk 62: Original shape = (100000, 8)
+2025-07-22 13:13:51,571 - INFO - Chunk 62 processed. Rows: 71187 | Memory Before: 111.30 MB, After: 112.37 MB, Delta: 1.07 MB
+2025-07-22 13:13:52,327 - INFO - Chunk 63: Original shape = (100000, 8)
+2025-07-22 13:13:54,861 - INFO - Chunk 63 processed. Rows: 71152 | Memory Before: 112.38 MB, After: 116.39 MB, Delta: 4.02 MB
+2025-07-22 13:13:55,765 - INFO - Chunk 64: Original shape = (100000, 8)
+2025-07-22 13:13:58,300 - INFO - Chunk 64 processed. Rows: 71237 | Memory Before: 112.91 MB, After: 112.38 MB, Delta: -0.53 MB
+2025-07-22 13:13:59,043 - INFO - Chunk 65: Original shape = (100000, 8)
+2025-07-22 13:14:01,508 - INFO - Chunk 65 processed. Rows: 71310 | Memory Before: 113.13 MB, After: 116.42 MB, Delta: 3.29 MB
+2025-07-22 13:14:02,251 - INFO - Chunk 66: Original shape = (100000, 8)
+2025-07-22 13:14:04,978 - INFO - Chunk 66 processed. Rows: 71305 | Memory Before: 112.91 MB, After: 112.92 MB, Delta: 0.01 MB
+2025-07-22 13:14:05,867 - INFO - Chunk 67: Original shape = (100000, 8)
+2025-07-22 13:14:08,441 - INFO - Chunk 67 processed. Rows: 71466 | Memory Before: 120.54 MB, After: 116.50 MB, Delta: -4.04 MB
+2025-07-22 13:14:09,289 - INFO - Chunk 68: Original shape = (100000, 8)
+2025-07-22 13:14:12,047 - INFO - Chunk 68 processed. Rows: 71354 | Memory Before: 113.71 MB, After: 113.48 MB, Delta: -0.23 MB
+2025-07-22 13:14:12,974 - INFO - Chunk 69: Original shape = (100000, 8)
+2025-07-22 13:14:15,891 - INFO - Chunk 69 processed. Rows: 71330 | Memory Before: 112.95 MB, After: 111.32 MB, Delta: -1.63 MB
+2025-07-22 13:14:16,853 - INFO - Chunk 70: Original shape = (100000, 8)
+2025-07-22 13:14:19,595 - INFO - Chunk 70 processed. Rows: 71348 | Memory Before: 112.05 MB, After: 112.91 MB, Delta: 0.86 MB
+2025-07-22 13:14:20,351 - INFO - Chunk 71: Original shape = (100000, 8)
+2025-07-22 13:14:22,742 - INFO - Chunk 71 processed. Rows: 71492 | Memory Before: 119.75 MB, After: 115.36 MB, Delta: -4.39 MB
+2025-07-22 13:14:23,497 - INFO - Chunk 72: Original shape = (100000, 8)
+2025-07-22 13:14:26,612 - INFO - Chunk 72 processed. Rows: 71319 | Memory Before: 112.42 MB, After: 112.96 MB, Delta: 0.54 MB
+2025-07-22 13:14:27,364 - INFO - Chunk 73: Original shape = (100000, 8)
+2025-07-22 13:14:30,208 - INFO - Chunk 73 processed. Rows: 71451 | Memory Before: 125.03 MB, After: 115.97 MB, Delta: -9.06 MB
+2025-07-22 13:14:31,168 - INFO - Chunk 74: Original shape = (100000, 8)
+2025-07-22 13:14:33,735 - INFO - Chunk 74 processed. Rows: 71262 | Memory Before: 112.97 MB, After: 113.49 MB, Delta: 0.52 MB
+2025-07-22 13:14:34,575 - INFO - Chunk 75: Original shape = (100000, 8)
+2025-07-22 13:14:37,398 - INFO - Chunk 75 processed. Rows: 71404 | Memory Before: 112.95 MB, After: 111.33 MB, Delta: -1.62 MB
+2025-07-22 13:14:38,566 - INFO - Chunk 76: Original shape = (100000, 8)
+2025-07-22 13:14:41,841 - INFO - Chunk 76 processed. Rows: 71401 | Memory Before: 112.07 MB, After: 112.94 MB, Delta: 0.86 MB
+2025-07-22 13:14:43,098 - INFO - Chunk 77: Original shape = (100000, 8)
+2025-07-22 13:14:46,517 - INFO - Chunk 77 processed. Rows: 71309 | Memory Before: 120.98 MB, After: 111.32 MB, Delta: -9.66 MB
+2025-07-22 13:14:47,575 - INFO - Chunk 78: Original shape = (100000, 8)
+2025-07-22 13:14:50,984 - INFO - Chunk 78 processed. Rows: 71446 | Memory Before: 111.54 MB, After: 115.48 MB, Delta: 3.94 MB
+2025-07-22 13:14:52,129 - INFO - Chunk 79: Original shape = (100000, 8)
+2025-07-22 13:14:55,542 - INFO - Chunk 79 processed. Rows: 71286 | Memory Before: 112.40 MB, After: 111.32 MB, Delta: -1.08 MB
+2025-07-22 13:14:56,416 - INFO - Chunk 80: Original shape = (100000, 8)
+2025-07-22 13:14:59,261 - INFO - Chunk 80 processed. Rows: 71527 | Memory Before: 110.84 MB, After: 111.72 MB, Delta: 0.88 MB
+2025-07-22 13:14:59,936 - INFO - Finished processing all chunks. Total time: 270.63 seconds (4.51 minutes)
