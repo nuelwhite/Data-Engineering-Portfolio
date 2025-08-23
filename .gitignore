@@ -1,0 +1,5 @@
+# ignore ipynb checkpoint files
+.ipynb_checkpoints
+
+# ignore environment files
+.env
