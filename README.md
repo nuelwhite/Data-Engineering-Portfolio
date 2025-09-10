@@ -1,6 +1,6 @@
-# 📊 Step 1 — Data Exploration & Quality Assessment
+# Step 1 — Data Exploration & Quality Assessment
 
-## 🎯 Objective
+## Objective
 
 The goal of Step 1 was to perform a **first-pass exploration** of Voice of the Customer (VoC) datasets. This helps establish:
 
@@ -14,26 +14,18 @@ This foundation ensures later analysis (sentiment modeling, topic detection, pre
 
 ---
 
-## 📂 Datasets Used
+## Datasets Used
 
 1. **Google Play Store Reviews**
 
    * User-generated app reviews with star ratings (1–5), review text, timestamps.
    * Used for **proxy sentiment (via stars)** and free-text exploration.
 
-2. **Twitter US Airline Sentiment**
 
-   * Tweets labeled *positive / neutral / negative* with reasons for negativity.
-   * Used as a **ground-truth labeled dataset** for sentiment benchmarking.
-
-3. **NPS Survey (Financial Services)**
-
-   * 0–10 customer satisfaction scores with free-text responses.
-   * Used to compute **Net Promoter Score (NPS)** and categorize responses as *Promoters, Passives, Detractors*.
 
 ---
 
-## 🔍 Exploration Process
+## Exploration Process
 
 ### 1. Shape & Quality
 
@@ -64,31 +56,22 @@ This foundation ensures later analysis (sentiment modeling, topic detection, pre
 
 ---
 
-## 📈 Key Findings
+## Key Findings
 
 *(replace with your real numbers once you run the notebook)*
 
 * **Google Play Reviews:**
 
-  * \~500,000 rows, text avg \~120 characters.
-  * Sentiment proxy skewed positive (65% positive, 20% negative, 15% neutral).
-  * Top negative themes: *crash, bug, update*.
+  * 12,495 rows of data
+  * text average of 147 characters.
+  * Sentiment proxy skewed positive (45% positive, 39% negative, 16% neutral).
+  * Top negative themes: *delay, cannot use, doesn't work*.
 
-* **Twitter Airline Sentiment:**
 
-  * \~15,000 tweets, avg \~20 tokens.
-  * Labels: \~60% negative, \~20% neutral, \~20% positive.
-  * Frequent complaints: *delays, cancellations, customer service*.
-
-* **NPS Survey:**
-
-  * \~10,000 responses, balanced across promoters/passives/detractors.
-  * Computed NPS: +25.
-  * Detractors focused on *fees, waiting times, app usability*.
 
 ---
 
-## 📊 Step 1 Deliverables
+## Step 1 Deliverables
 
 * **Notebook:** `01_explore_data.ipynb`
 
@@ -103,7 +86,7 @@ This foundation ensures later analysis (sentiment modeling, topic detection, pre
   * Avg char/token length
   * Empty/short text %
   * Sentiment distribution
-  * NPS (if available)
+  * NPS 
 
 ---
 
