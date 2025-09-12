@@ -4,12 +4,9 @@ import random
 import time
 import uuid
 import csv
+import json
 from datetime import datetime
 import logging
-import json
-
-from notebooks.workbook import events_per_file, file_counter, session_id, tmp_file, user_id
-
 
 # Configurations 
 OUTPUT_DIR = 'events_data'
@@ -160,31 +157,45 @@ def generate_event(user_id, session_id):
     return event
 
 
-def write_to_file(output, header):
+def write_to_file(header):
     file_counter = 0
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     while True:
         file_counter += 1
-        tmp_file = os.path.join(output, f'event_data_{file_counter:05d}.tmp')
+        tmp_file = os.path.join(OUTPUT_DIR, f'event_data_{file_counter:05d}.tmp')
         final_file = tmp_file.replace('.tmp', '.csv')
 
-        with open(tmp_file, newline='', encoding='utf-8') as f:
+        with open(tmp_file, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(header)
 
             for _ in range(EVENTS_PER_FILE):
                 user_id = random.choice(USERS)
                 session_id = f'session_{random.randint(1,1000)}'
-                row = generate_event(user_id, session_id)
+                event = generate_event(user_id, session_id)
+                
+                row = [event[field] for field in header]
                 writer.writerow(row)
 
-
         os.rename(tmp_file, final_file)
-        print(f'Generated {events_per_file} events in {final_file}')
+        print(f'Generated {EVENTS_PER_FILE} events in {final_file}')
 
         time.sleep(DELAY_BETWEEN_FILES)
 
 
-        
+if __name__ == '__main__':
+    headers = [
+        "event_id","timestamp","event_type","user_id","session_id",
+        "product_id","product_category","product_price","quantity","order_id","cart_value",
+        "discount_applied","shipping_method","payment_method",
+        "location","age_group","gender","loyalty_member",
+        "device","operating_system","browser","ip_address","latency_ms",
+        "utm_source","utm_campaign","page_url","referrer_url"
+        ]
+
+    print('Generating data...')
+    write_to_file(headers)
+
 
 
