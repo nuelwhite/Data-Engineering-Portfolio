@@ -8,6 +8,8 @@ from datetime import datetime
 import logging
 import json
 
+from notebooks.workbook import events_per_file, file_counter, session_id, tmp_file, user_id
+
 
 # Configurations 
 OUTPUT_DIR = 'events_data'
@@ -156,3 +158,33 @@ def generate_event(user_id, session_id):
     }
 
     return event
+
+
+def write_to_file(output, header):
+    file_counter = 0
+    
+    while True:
+        file_counter += 1
+        tmp_file = os.path.join(output, f'event_data_{file_counter:05d}.tmp')
+        final_file = tmp_file.replace('.tmp', '.csv')
+
+        with open(tmp_file, newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+
+            for _ in range(EVENTS_PER_FILE):
+                user_id = random.choice(USERS)
+                session_id = f'session_{random.randint(1,1000)}'
+                row = generate_event(user_id, session_id)
+                writer.writerow(row)
+
+
+        os.rename(tmp_file, final_file)
+        print(f'Generated {events_per_file} events in {final_file}')
+
+        time.sleep(DELAY_BETWEEN_FILES)
+
+
+        
+
+
